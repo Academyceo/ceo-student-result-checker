@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="Check student results with CEO Student Result Checker.">
+  <title>CEO Student Result Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="CEO Student Result Checker home">
+        <span class="brand-mark" aria-hidden="true"><span>CEO</span></span>
+        <span class="brand-copy">
+          <strong>CEO</strong>
+          <span>STUDENT RESULT CHECKER</span>
+        </span>
+      </a>
+      <a class="teacher-link" href="#teacher">Teacher portal <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="status-dot"></span> ACADEMIC SESSION 2025 / 2026</span>
+          <h1>Your hard work.<br><span>Your results.</span></h1>
+          <p>Welcome to the CEO student result checker. Enter your student ID to view your academic performance.</p>
+        </div>
+        <div class="hero-seal" aria-label="Excellence in education">
+          <span class="seal-ring">CEO · LEARN · GROW · ACHIEVE ·</span>
+          <span class="seal-center">C<span>✳</span>O</span>
+          <span class="seal-year">EST. 2025</span>
+        </div>
+      </section>
+
+      <section class="lookup-panel panel" aria-labelledby="lookup-heading">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">STUDENT ACCESS</span>
+            <h2 id="lookup-heading">Check your result</h2>
+          </div>
+          <span class="panel-index">01 / RESULT LOOKUP</span>
+        </div>
+        <form id="lookup-form" class="lookup-form">
+          <label class="field-label" for="student-id">Student ID</label>
+          <div class="lookup-controls">
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">⌕</span>
+              <input id="student-id" name="studentId" type="text" placeholder="e.g. CEO/2026/001" autocomplete="off" required>
+            </div>
+            <button class="button button-gold" type="submit">View result <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="form-hint">Use your unique student ID to access your results.</p>
+          <p id="lookup-message" class="message" role="status" aria-live="polite"></p>
+        </form>
+        <div id="result-container" aria-live="polite"></div>
+      </section>
+
+      <section class="demo-section" aria-labelledby="demo-heading">
+        <div class="section-heading demo-heading">
+          <div>
+            <span class="eyebrow">TRY A SAMPLE</span>
+            <h2 id="demo-heading">Demo student results</h2>
+          </div>
+          <span class="demo-count"><span id="demo-count">7</span> STUDENTS</span>
+        </div>
+        <div id="demo-students" class="student-grid"></div>
+      </section>
+
+      <section class="teacher-section panel" id="teacher" aria-labelledby="teacher-heading">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">STAFF ACCESS</span>
+            <h2 id="teacher-heading">Teacher portal</h2>
+          </div>
+          <span class="panel-index">02 / RESULT MANAGEMENT</span>
+        </div>
+        <div id="teacher-content"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#" aria-label="CEO Student Result Checker home">
+        <span class="brand-mark" aria-hidden="true"><span>CEO</span></span>
+        <span class="brand-copy"><strong>CEO</strong><span>STUDENT RESULT CHECKER</span></span>
+      </a>
+      <span>LEARNING TODAY. LEADING TOMORROW.</span>
+      <span>© <span id="current-year"></span> CEO</span>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
